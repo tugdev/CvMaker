@@ -1,0 +1,7 @@
+C:\Users\Tugdev\Documents\Visual Studio 2010\Projects\CvHazirla\CvHazirla\bin\CvHazirla.dll
+C:\Users\Tugdev\Documents\Visual Studio 2010\Projects\CvHazirla\CvHazirla\bin\CvHazirla.pdb
+C:\Users\Tugdev\Documents\Visual Studio 2010\Projects\CvHazirla\CvHazirla\bin\CKEditor.NET.dll
+C:\Users\Tugdev\Documents\Visual Studio 2010\Projects\CvHazirla\CvHazirla\bin\CKEditor.NET.pdb
+C:\Users\Tugdev\Documents\Visual Studio 2010\Projects\CvHazirla\CvHazirla\obj\Debug\CvHazirla.dll
+C:\Users\Tugdev\Documents\Visual Studio 2010\Projects\CvHazirla\CvHazirla\obj\Debug\CvHazirla.pdb
+C:\Users\Tugdev\Documents\Visual Studio 2010\Projects\CvHazirla\CvHazirla\obj\Debug\CvHazirla.csprojResolveAssemblyReference.cache

@@ -19,28 +19,27 @@
                         <li class="nav-header"><h6><span class="glyphicon glyphicon-certificate "></span>Kategoriler&nbsp;</h4></li>
                     
                     </ul> -->
-					 
+            
 					<h6>CV Oluştur</h6>     
  <div class="tabbable tabs-left">
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#lA" data-toggle="tab">Üyelik Bilgilerim</a></li>
-          <li><a href="#lB" data-toggle="tab">Kişisel Bilgiler</a></li>
-          <li><a href="#lC" data-toggle="tab">İletişim </a></li>
+          <li class="active"><a href="#lA" data-toggle="tab">Kişisel Bilgiler</a></li>       
+          <li><a href="#lC" data-toggle="tab">İletişim Bilgileri</a></li>
 		  <li><a href="#lD" data-toggle="tab">Eğitim Bilgileri</a></li>
           <li><a href="#lE" data-toggle="tab">İş Tecrübesi</a></li>
 		  <li><a href="#lF" data-toggle="tab">Sertifika Bilgileri</a></li>
-          <li><a href="#lG" data-toggle="tab">Bilgisayar Bilgisileri</a></li>
+          <li><a href="#lG" data-toggle="tab">Bilgisayar Bilgileri</a></li>
 		  <li><a href="#lH" data-toggle="tab">Üye Olunan Kulüpler/Hobiler</a></li>
           <li><a href="#lJ" data-toggle="tab">Referanslar</a></li>
 		  <li><a href="#lK" data-toggle="tab">Burslar/Ödüller/Başarılar/Projeler</a></li>
 		  <li><a href="#lL" data-toggle="tab">Tamamlayıcı/Özet Bilgiler</a></li>
-		  <li><a href="#lM" data-toggle="tab">YABANCI DİL BİLGİSİ</a></li>
+		  <li><a href="#lM" data-toggle="tab">Yabancı Dil Bilgisi</a></li>
           <li><a href="#lN" data-toggle="tab">Section 3</a></li>
 		</ul>
         <div class="tab-content">
-          <div class="tab-pane active" id="lA"><!-- Üyelik Bilgilerim -->
+          <div class="tab-pane active" id="lA"><!--Kişisel Bilgiler -->
 			     <div class="bs-docs-grid">
-           
+                     
            
             <div class="row show-grid">
                 <div class="span4">
@@ -57,6 +56,8 @@
     
     margin-left: 70px;
     margin-top: 20px;
+        margin-bottom: 10px;
+
 "/>
                 <asp:Button ID="ButtonSec" runat="server" Text="Yükle" 
                     onclick="ButtonSec_Click" class="btn btn-primary" />
@@ -71,46 +72,86 @@
 
         </asp:UpdatePanel>
                     </div>
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>İsim</label>
-                       <input type="text" class="form-control" id="isim" />
-                    </div>
+                   
 
                     <div class="col-xs-4" style=" margin-top: 21px; ">
-                    <label>Soyisim</label>
-                        <input type="text" class="form-control" id="soyisim" />
+                        <label>Ad</label>
+                        <asp:TextBox ID="Txtbxad" class="form-control" runat="server"></asp:TextBox>
+                       
                     </div>
-					<div class="col-xs-4" style=" margin-top: 21px;margin-bottom:75px; ">
-                        <label>E-Posta</label>
-                       <input type="text" class="form-control" id="mail"/ >
+
+                    <div class="col-xs-4" style=" margin-top: 21px; margin-bottom:55px; ">
+                    <label>Soyad</label>
+                        <asp:TextBox ID="Txtbxsoyad" class="form-control" runat="server"></asp:TextBox>
+                    
                     </div>
+					
                 </div>
 			  
 			  
 			  </div>
-              <div class="span5">
+             <div class="span4">
 			  
 			  <div>
-                   <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>eski şifre</label>
-                       <input type="text" class="form-control" id="mail" />
-                    </div>
-					<div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>yeni şifre</label>
-                       <input type="text" class="form-control" id="mail" />
-                    </div>
+              <div class="col-xs-4" style=" margin-top: 21px; ">
+                        <label>Doğum yeri</label>
+                     <%-- <select class="form-control" id="Select1">
+						  <option>erzincan</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>--%>
+                  <asp:DropDownList ID="DropDownList1" runat="server" 
+                            onselectedindexchanged="DropDownList1_SelectedIndexChanged">
+                  </asp:DropDownList>
 
+                    </div>
+					
+
+					 <div class="col-xs-4" style=" margin-top: 21px; ">
+                        <label>Doğum Tarihi</label>
+                       <input type="date" class="form-control" id="Date1"  value="2014-09-19"/>
+                    </div>
                     <div class="col-xs-4" style=" margin-top: 21px; ">
-                    <label>tekrar yeni Şifre</label>
-                        <input type="text" class="form-control" id="sifre" />
+                        <label>Cinsiyet</label>
+                       
+  <input type="radio" name="optionsRadios1" id="Radio1" value="option1" />
+  Erkek
+
+ 
+  <input type="radio" name="optionsRadios1" id="Radio2" value="option2" />
+ Kadın
+
                     </div>
-					
-					<div class="col-xs-4" style=" margin-top: 21px; margin-bottom:25px;">
-					 
-                        <button class="btn btn-primary" type="submit">Şifremi Değiştir</button>
+					 <div class="col-xs-4" style=" margin-top: 21px; ">
+                        <label>Medeni Durum</label>
+                         
+        
+  <input type="radio" name="optionsRadios2" id="Radio3" value="option3" />
+  Evli
+
+
+
+  <input type="radio" name="optionsRadios2" id="Radio4" value="option4" />
+ Bekar
+
                     </div>
-					
-					
+					 <div class="col-xs-4" style=" margin-top: 21px; ">
+                        <label>Sürücü Belgesi</label>
+                       
+<input type="radio" name="optionsRadios3" id="Radio5" value="option5" />
+Var
+ <input type="radio" name="optionsRadios3" id="Radio6" value="option6" />
+Yok
+
+
+                    </div>
+					 <div class="col-xs-4" style=" margin-top: 21px; margin-bottom:5px; ">
+                        <label>Ülke</label>
+                        <asp:DropDownList ID="DropDownListulke1" runat="server">
+                        </asp:DropDownList>
+                    </div>
                 </div>
 			  
 			  
@@ -121,96 +162,7 @@
   
           </div>
 		  
-          <div class="tab-pane" id="lB"><!--Kişisel Bilgiler -->
-				<div class="bs-docs-grid">
-           
-           
-            <div class="row show-grid">
-                <div class="span5">
-				
-			  <div>
-
-
-          
-
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Ad</label>
-                       <input type="text" class="form-control" id="isim" />
-                    </div>
-
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                    <label>Soyad</label>
-                        <input type="text" class="form-control" id="soyisim" />
-                    </div>
-					<div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Doğum yeri</label>
-                      <select class="form-control" id="dyer">
-						  <option>Türkiye</option>
-						  <option>2</option>
-						  <option>3</option>
-						  <option>4</option>
-						  <option>5</option>
-						</select>
-                    </div>
-					 
-					 <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Doğum Tarihi</label>
-                       <input type="date" class="form-control" id="mail"  value="2014-09-19">
-                    </div>
-					
-                </div>
-			  
-			  
-			  </div>
-              <div class="span4">
-			  
-			  <div>
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Cinsiyet</label>
-                    
-  <input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked>
-  Erkek
-
  
-  <input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2" checked>
- Kadın
-
-                    </div>
-					 <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Medeni Durum</label>
-                         
-        
-  <input type="radio" name="optionsRadios2" id="optionsRadios3" value="option3" checked>
-  Evli
-
-
-
-  <input type="radio" name="optionsRadios2" id="optionsRadios4" value="option4" checked>
- Bekar
-
-                    </div>
-					 <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Sürücü Belgesi</label>
-                       
-<input type="radio" name="optionsRadios3" id="optionsRadios5" value="option5" checked>
-Var
- <input type="radio" name="optionsRadios3" id="optionsRadios6" value="option6" checked>
-Yok
-
-
-                    </div>
-					 <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Uyruk</label>
-                       <input type="text" class="form-control" id="mail" >
-                    </div>
-                </div>
-			  
-			  
-			  </div>
-            </div>
-            
-          </div>
-          </div>
 		  
           <div class="tab-pane" id="lC"><!-- İletişim -->
             <div class="bs-docs-grid">
@@ -245,6 +197,7 @@ Yok
 <table style="
     margin-left: 110px;
     margin-top: 20px;
+    margin-bottom:35px;
 " border="0">
                 <tr>
                     <td class="sol" style="width: 50px;">
@@ -288,10 +241,10 @@ Yok
                     </td>
                 </tr>
 </table>
-					 <div class="col-xs-4" style=" margin-top: 21px; ">
+					 <div class="col-xs-4" style=" margin-top: 21px; margin-bottom:150px;">
                         <label>Adres</label>
 						<textarea rows="3" class="form-control" id="mail"></textarea>
-                       
+                         
                     </div>
 					
                 </div>
@@ -304,6 +257,7 @@ Yok
 
                                     <div class="col-xs-4" style=" margin-top: 21px; ">
                                         <label>cep tl1</label>
+
                                        <input id="phone1" tabindex="3" type="text" />
                                     </div>
               
@@ -313,15 +267,16 @@ Yok
                     </div>
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
                         <label>e-posta</label>
-                       <input type="text" class="form-control" id="mail" />
+                         <asp:TextBox ID="Txtbxmail1" class="form-control" runat="server"></asp:TextBox>
+                      
                     </div>
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
                         <label>e-posta(2)</label>
-                       <input type="text" class="form-control" id="mail" />
+                     <asp:TextBox ID="Txtbxmail2" class="form-control" runat="server"></asp:TextBox>
                     </div>
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
                         <label>web sayfam</label>
-                       <input type="text" class="form-control" id="mail" />
+                      <asp:TextBox ID="Txtbxweb" class="form-control" runat="server"></asp:TextBox>
                     </div>
                 </div>
 			  
@@ -356,11 +311,11 @@ Yok
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
                         <label>başlangıç</label>
 						
-                       <select class="form-control input-small" placeholder=".input-small" id="isim">
+                     <%--  <select class="form-control input-small" placeholder=".input-small" id="isim">
 						  <option>seçiniz</option>
 						  <option>ocak</option>
 						  <option>şubat</option>
-						  <option>Yüksek Lisans</option>
+						  <option>aArt</option>
 						  <option>Doktora</option>
 						</select>
 					   <select class="form-control input-small" placeholder=".input-small" id="isim">
@@ -369,26 +324,29 @@ Yok
 						  <option>2014</option>
 						  <option>Yüksek Lisans</option>
 						  <option>Doktora</option>
-						</select>
+						</select>--%>
+                         <asp:DropDownList class="form-control input-small" ID="DropDownListay" runat="server">
+                         <asp:ListItem>Ay</asp:ListItem>
+                         </asp:DropDownList>
+
+                         <asp:DropDownList class="form-control input-small" ID="DropDownListyil" runat="server">
+                         <asp:ListItem>Yıl</asp:ListItem>
+                         </asp:DropDownList>
+
+
                     </div>
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
                          <label> bitiş </label>
-						 <select class="form-control input-small" placeholder=".input-small" id="isim">
-						  <option>seçiniz</option>
-						  <option>ocak</option>
-						  <option>şubat</option>
-						  <option>Yüksek Lisans</option>
-						  <option>Doktora</option>
-						</select>
-					   <select class="form-control input-small" placeholder=".input-small" id="isim">
-						  <option>seçiniz</option>
-						  <option>1992</option>
-						  <option>2014</option>
-						  <option>Yüksek Lisans</option>
-						  <option>Doktora</option>
-						</select>
-						 <input type="checkbox" value="">Devam ediyorum
-					     <input type="checkbox" value="">Terk
+                         <asp:DropDownList class="form-control input-small" ID="DropDownListay2" runat="server">
+                         <asp:ListItem>Ay</asp:ListItem>
+                         </asp:DropDownList>
+
+                         <asp:DropDownList class="form-control input-small" ID="DropDownListyil2" runat="server">
+                         <asp:ListItem>Yıl</asp:ListItem>
+                         </asp:DropDownList>
+
+						 <input type="checkbox" value=""/>Devam ediyorum
+					     <input type="checkbox" value=""/>Terk
 					
 							</div>
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
@@ -407,7 +365,8 @@ Yok
                     </div>
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
                         <label>şehir</label>
-                       <input type="text" class="form-control" id="mail" >
+                         <asp:DropDownList ID="DropDownList2" runat="server">
+                         </asp:DropDownList>
                     </div>
 					 
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
@@ -434,7 +393,8 @@ Yok
                     </div>
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
                         <label>öğretim dili</label>
-                       <input type="text" class="form-control" id="mail" />
+                         <asp:DropDownList ID="DropDownListdil" runat="server">
+                         </asp:DropDownList>  
                     </div>
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
                         <label>eklemek istediğiniz Notlar</label>
@@ -444,56 +404,32 @@ Yok
 			  
 			  
 			  </div>
-			   <div class="span4">
+			   <div class="span4" style="
+    height: 790px;
+">
 			  <h3> Lise Bilgisi </h3>
 			  <div>
                     <div class="col-xs-4" style=" margin-top: 21px; ">
                         <label>Lise Adı</label>
-                       <input type="text" class="form-control" id="mail" />
+                       <asp:TextBox ID="Txtbxlise" class="form-control" runat="server"></asp:TextBox>
                     </div>
-					 <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Lise Tipi</label>
-                        <select class="form-control " id="isim">
-						  <option>seçiniz</option>
-						  <option>Açık Öğretim</option>
-						  <option>Adalet Meslek</option>
-						  <option>Anadolu lisesi</option>
-						  <option>vs</option>
-						</select>
-                    </div>
-					 <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Lise Bölüm</label>
-                        <select class="form-control " id="isim">
-						  <option>seçiniz</option>
-						  <option>sayısal</option>
-						  <option>adalet</option>
-						  <option>sözel</option>
-						  <option>eşit ağırlık vs/option>
-						</select>
+					
+					<div class="col-xs-4" style=" margin-top: 21px; ">
+                        <label>Lise Hakkında Bilgi</label>
+                <textarea rows="3" class="form-control" id="Textarea1"></textarea>
                     </div>
 					 <div class="col-xs-4" style=" margin-top: 21px; ">
                         <label>Lise Bitiş Tarihi</label>
-                       <select class="form-control input-small" placeholder=".input-small" id="isim">
-						  <option>seçiniz</option>
-						  <option>ocak</option>
-						  <option>şubat</option>
-						  <option>mart</option>
-						  <option>nisan</option>
-						</select>
-					   <select class="form-control input-small" placeholder=".input-small" id="isim">
-						  <option>seçiniz</option>
-						  <option>1992</option>
-						  <option>2014</option>
-						  <option>45354</option>
-						  <option>--</option>
-						</select>
-						 <input type="checkbox" value="">Devam ediyorum
-					     <input type="checkbox" value="">Terk
+                         <asp:DropDownList class="form-control input-small" ID="DropDownListay3" runat="server">
+                         <asp:ListItem>Ay</asp:ListItem>
+                         </asp:DropDownList>
+                         <asp:DropDownList class="form-control input-small" ID="DropDownListyil3" runat="server">
+                         <asp:ListItem>Yıl</asp:ListItem>
+                         </asp:DropDownList>
+						 <input type="checkbox" value=""/>Devam ediyorum
+					     <input type="checkbox" value=""/>Terk
                     </div>
-					 <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>eklemek istediğiniz Notlar</label>
-                <textarea rows="3" class="form-control" id="mail"></textarea>
-                    </div>
+					 
                 </div>
 			  
 			  
@@ -503,114 +439,251 @@ Yok
           </div>
             </div>
             
-       
-		  
-          <div class="tab-pane" id="lE"><!--İş Tecrübesi -->
-           <input type="checkbox" value="">İş Tecrübem Yok <br></br>
-		   <input type="checkbox" value="">İş Tecrübem Var (burası işaretliyse eğer aşağıdaki yer gözüksün.bir nevi disable olsun burası işartliyse enable olsun)
-		   <div class="bs-docs-grid">
-        
+        <div class="tab-pane" id="lE"><!--deneme -->
+           <div class="bs-docs-grid">
+           
+           
             <div class="row show-grid">
-                <div class="span4">
+               
+            <!--  <div class="span5"> -->
+            <div class="span5 offset2" style="
+    margin-left: 30px;
+    width: 850px;
+">
 			  <h3> İş Tecrübesi </h3>
+              <br />
+              
 			  <div>
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Firma Adı</label>
-                       <input type="text" class="form-control" id="isim" >
-                    </div>
+               <table border="0" style="text-align:center;"  class="table table-striped" >
+                       <caption></caption>
+                  <thead>
+                    <tr>
+                      <th>&nbsp;&nbsp</th>
+                      <th style="text-align:center;"><strong>Firma Adı</strong></th>
+                      <th style="text-align:center;"><strong>Başlangıç</strong></th>
+                      <th style="text-align:center;"><strong>Bitiş</strong></th>
+                      <th style="text-align:center;"><strong>Firmadaki Pozisyon</strong></th>
+                      <th style="text-align:center;"><strong>Çalışma Şekli</strong></th>
+                      <th style="text-align:center;"><strong>İş tanımı/Firma Sektörü/İş Alanı Genel Bilgi</strong></th>
+                      <th style="text-align:center;"><strong>Şehir</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody >
+                   <tr style="background-color:#9999CC;" >
+                       <td style="text-align:center;">
+                           1
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:TextBox class="form-control input-small" ID="Txtbx1frm" runat="server"></asp:TextBox>
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList ID="DropDownListay4" class="form-control input-small" runat="server">
+                           <asp:ListItem>Ay</asp:ListItem>
+                           </asp:DropDownList>  
+                           <asp:DropDownList ID="DropDownListyil4" class="form-control input-small" runat="server">
+                           <asp:ListItem>Yıl</asp:ListItem>
+                           </asp:DropDownList>
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList ID="DropDownListay5" class="form-control input-small" runat="server">
+                           <asp:ListItem>Ay</asp:ListItem>
+                           </asp:DropDownList>  
 
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                    <label>Başlangıç Tarihi</label>
-                        <select class="form-control input-small" placeholder=".input-small" id="isim">
-						  <option>seçiniz</option>
-						  <option>ocak</option>
-						  <option>şubat</option>
-						  <option>mart</option>
-						  <option>nisan</option>
-						</select>
-					   <select class="form-control input-small" placeholder=".input-small" id="isim">
-						  <option>seçiniz</option>
-						  <option>1992</option>
-						  <option>2014</option>
-						  <option>45354</option>
-						  <option>--</option>
-						</select>
-						
-                    </div>
-					<div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Bitiş Tarihi</label>
-                       <select class="form-control input-small" placeholder=".input-small" id="isim">
-						  <option>seçiniz</option>
-						  <option>ocak</option>
-						  <option>şubat</option>
-						  <option>mart</option>
-						  <option>nisan</option>
-						</select>
-					   <select class="form-control input-small" placeholder=".input-small" id="isim">
-						  <option>seçiniz</option>
-						  <option>1992</option>
-						  <option>2014</option>
-						  <option>45354</option>
-						  <option>--</option>
-						</select>
-						 <input type="checkbox" value="">Hala Çalışıyorum
+                           <asp:DropDownList ID="DropDownListyil5" class="form-control input-small" runat="server">
+                           <asp:ListItem>Yıl</asp:ListItem>
+                           </asp:DropDownList>
+
+                           <br />
+						 <input type="checkbox" value=""/>Devam
 					     
-                    </div>
-					<div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Firmadaki Pozisyon</label>
-                       <input type="text" class="form-control" id="mail" >
-                    </div>
-					<div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>İş tanımı</label>
-                       <input type="text" class="form-control" id="mail" >
-                    </div>
-                </div>
-			  
-			  
-			  </div>
-              <div class="span5">
-			  
-			  <div>
-                   <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Firma Sektörü</label>
-                       <input type="text" class="form-control" id="mail" >
-                    </div>
-					<div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>İş Alanı</label>
-                       <input type="text" class="form-control" id="mail" >
-                    </div>
-
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                    <label>Çalışma Şekli</label>
-                        <select class="form-control" id="isim">
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:TextBox class="form-control input-small" ID="Txtbx1frmpzsyn" runat="server"></asp:TextBox>
+                       </td>
+                       <td style="text-align:center;">
+                          <select class="form-control input-small" id="Select17">
 						  <option>seçiniz</option>
 						  <option>Yarı Zamanlı</option>
 						  <option>Dönemsel/Proje Bazlı</option>
 						  <option>Stajyer</option>
 						  <option>Tam Zamanlı</option>
 						</select>
-                    </div>
-					<div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Ülke</label>
-                       <input type="text" class="form-control" id="mail" >
-                    </div>
+                       </td>
+                       <td style="text-align:center;">
+                          <textarea rows="3" class="form-control input-small" id="Textarea3"></textarea>
+                       </td>
+                       <td style="text-align:center;" >
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList3" runat="server">
+                           </asp:DropDownList>
+                       </td>
+                   </tr>
+                   <tr  >
+                       <td style="text-align:center;">
+                           2
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:TextBox class="form-control input-small" ID="TextBox3" runat="server"></asp:TextBox>
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList4" runat="server">
+                           <asp:ListItem>Ay</asp:ListItem>
+                           </asp:DropDownList> 
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList5" runat="server">
+                           <asp:ListItem>Yıl</asp:ListItem>
+                           </asp:DropDownList>
 
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                    <label>Şehir</label>
-                        <input type="text" class="form-control" id="sifre" >
-                    </div>
-					
-					
-					
-					
-                </div>
-			  
-			  
-			  </div>
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList6" runat="server">
+                           <asp:ListItem>Ay</asp:ListItem>
+                           </asp:DropDownList> 
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList7" runat="server">
+                           <asp:ListItem>Yıl</asp:ListItem>
+                           </asp:DropDownList>
+                             <br />
+						 <input type="checkbox" value=""/>Devam
+					     
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:TextBox class="form-control input-small" ID="TextBox10" runat="server"></asp:TextBox>
+                       </td>
+                       <td style="text-align:center;">
+                          <select class="form-control input-small" id="Select18">
+						  <option>seçiniz</option>
+						  <option>Yarı Zamanlı</option>
+						  <option>Dönemsel/Proje Bazlı</option>
+						  <option>Stajyer</option>
+						  <option>Tam Zamanlı</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                          <textarea rows="3" class="form-control input-small" id="Textarea4"></textarea>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select22">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                   </tr>
+                     <tr>
+                       <td style="text-align:center;">
+                           3
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:TextBox class="form-control input-small" ID="TextBox2" runat="server"></asp:TextBox>
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList8" runat="server">
+                           <asp:ListItem>Ay</asp:ListItem>
+                           </asp:DropDownList>   
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList9" runat="server">
+                           <asp:ListItem>Yıl</asp:ListItem>
+                           </asp:DropDownList>
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList10" runat="server">
+                           <asp:ListItem>Ay</asp:ListItem>
+                           </asp:DropDownList>
+
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList11" runat="server">
+                           <asp:ListItem>Yıl</asp:ListItem>
+                           </asp:DropDownList>
+                             <br />
+						 <input type="checkbox" value=""/>Devam
+					     
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:TextBox class="form-control input-small" ID="TextBox13" runat="server"></asp:TextBox>
+                       </td>
+                       <td style="text-align:center;">
+                           <select class="form-control input-small" id="Select20">
+						  <option>seçiniz</option>
+						  <option>Yarı Zamanlı</option>
+						  <option>Dönemsel/Proje Bazlı</option>
+						  <option>Stajyer</option>
+						  <option>Tam Zamanlı</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                          <textarea rows="3" class="form-control input-small" id="Textarea5"></textarea>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select25">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                   </tr>
+                     <tr >
+                       <td style="text-align:center;">
+                           4
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:TextBox class="form-control input-small" ID="TextBox1" runat="server"></asp:TextBox>
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList12" runat="server">
+                           <asp:ListItem>Ay</asp:ListItem>
+                           </asp:DropDownList>
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList13" runat="server">
+                           <asp:ListItem>Yıl</asp:ListItem>
+                           </asp:DropDownList>
+
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList14" runat="server">
+                           <asp:ListItem>Ay</asp:ListItem>
+                           </asp:DropDownList> 
+                           <asp:DropDownList class="form-control input-small" ID="DropDownList15" runat="server">
+                           <asp:ListItem>Yıl</asp:ListItem>
+                           </asp:DropDownList>
+                             <br />
+						 <input type="checkbox" value=""/>Devam
+					     
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:TextBox class="form-control input-small" ID="TextBox16" runat="server"></asp:TextBox>
+                       </td>
+                       <td style="text-align:center;">
+                           <select class="form-control input-small" id="Select23">
+						  <option>seçiniz</option>
+						  <option>Yarı Zamanlı</option>
+						  <option>Dönemsel/Proje Bazlı</option>
+						  <option>Stajyer</option>
+						  <option>Tam Zamanlı</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                         <textarea rows="3" class="form-control input-small" id="Textarea6"></textarea>
+                       </td>
+                       <td>
+                            <select class="form-control input-small" id="Select28">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                   </tr>
+                   </tbody>
+               </table>
+                 </div>
+          
             </div>
             
           </div>
           </div>
+          </div>
+		  
+         
 		  
           <div class="tab-pane" id="lF"><!--Sertifika Bilgileri -->
                  <div class="bs-docs-grid">
@@ -655,7 +728,7 @@ Yok
 			  <h5> Bilgisayar kullanımıyla ilgili bilgileri bu alanda belirtebilirsiniz.</h5>
 			  <div>
                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Buraya textarea değil metin editörü </label>
+                        
                        <CKEditor:CKEditorControl ID="CKEditorControlBil" runat="server"></CKEditor:CKEditorControl>
                     </div>
 					
@@ -683,7 +756,7 @@ Yok
 			  <h3> Üye Olunan Kulüpler/Hobiler </h3>
 			  <div>
                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Buraya textarea değil metin editörü gelecek ben bulamadm </label>
+                       
 
                        <CKEditor:CKEditorControl ID="CKEditorControlUye" runat="server"></CKEditor:CKEditorControl>
 
@@ -714,7 +787,7 @@ Yok
 			  <h5>Referansın Adı /	Referansın Soyadı / E-Mail Adresi /	Telefonu</h5>
 			  <div>
                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Buraya textarea değil metin editörü gelecek </label>
+                       
                        <CKEditor:CKEditorControl ID="CKEditorControlReferans" runat="server"></CKEditor:CKEditorControl>
                     </div>
 					
@@ -741,7 +814,7 @@ Yok
 </h5>
 			  <div>
                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Buraya textarea değil metin editörü gelecek  </label>
+                       
                        <CKEditor:CKEditorControl ID="CKEditorControlOdul" runat="server"></CKEditor:CKEditorControl>
                     </div>
                 </div>		
@@ -765,7 +838,7 @@ Yok
 			  <h3> Özet Bilgiler </h3>
 			  <div>
                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Buraya textarea değil metin editörü gelecek</label>
+                       
                        <CKEditor:CKEditorControl ID="CKEditorControlOzet" runat="server"></CKEditor:CKEditorControl>
                     </div>
                 </div>		
@@ -774,62 +847,233 @@ Yok
             
           </div>
           </div>
-          <div class="tab-pane" id="lM"><!--YABANCI DİL BİLGİSİ -->
-               <div class="bs-docs-grid">
+        
+		  
+		   <div class="tab-pane" id="lM"><!-- -->
+                         
+ <div class="bs-docs-grid">
            
            
             <div class="row show-grid">
-                <div class="span4">
-			  <h3> YABANCI DİL BİLGİSİ</h3>
+               
+            <!--  <div class="span5"> -->
+            <div class="span5 offset2" style="
+    margin-left: 100px;
+    width: 730px;
+">
+			  <h3> YABANCI DİL BİLGİSİ </h3>
+              <br />
+              
 			  <div>
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                        <label>Yabancı Dil</label>
-                       <input type="text" class="form-control" id="isim" >
-                    </div>
-
-                    <div class="col-xs-4" style=" margin-top: 21px; ">
-                    <label>Konuşma</label>
-                        <select class="form-control" id="isim">
+               <table border="0" style="text-align:center;"  class="table table-striped" >
+                       <caption></caption>
+                  <thead>
+                    <tr>
+                      <th>&nbsp;&nbsp</th>
+                      <th style="text-align:center;"><strong>Yabancı Dil</strong></th>
+                      <th style="text-align:center;"><strong>Konuşma</strong></th>
+                      <th style="text-align:center;"><strong>Yazma</strong></th>
+                      <th style="text-align:center;"><strong>Anlama</strong></th>
+                    </tr>
+                  </thead>
+                  <tbody >
+                   <tr style="background-color:#9999CC;" >
+                       <td style="text-align:center;">
+                           1. Dil
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownListDil2" runat="server">
+                           </asp:DropDownList> 
+                       </td>
+                       <td style="text-align:center;">
+                           <select class="form-control input-small" id="Select1">
 						  <option>seçiniz</option>
 						  <option>Başlangıç</option>
 						  <option>Orta</option>
 						  <option>İyi</option>
 						  <option>Çok İyi</option>
 						</select>
-                    </div>
-					<div class="col-xs-4" style=" margin-top: 21px;margin-bottom:75px; ">
-                        <label>Yazma</label>
-                       <select class="form-control" id="isim">
+                       </td>
+                       <td style="text-align:center;">
+                           <select class="form-control input-small" id="Select3">
 						  <option>seçiniz</option>
 						  <option>Başlangıç</option>
 						  <option>Orta</option>
 						  <option>İyi</option>
 						  <option>Çok İyi</option>
 						</select>
-                    </div>
-					<div class="col-xs-4" style=" margin-top: 21px;margin-bottom:75px; ">
-                        <label>Anlama</label>
-                        <select class="form-control" id="isim">
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select4">
 						  <option>seçiniz</option>
 						  <option>Başlangıç</option>
 						  <option>Orta</option>
 						  <option>İyi</option>
 						  <option>Çok İyi</option>
 						</select>
-                    </div>
-                </div>
-			  
-			  
-			  </div>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td style="text-align:center;">
+                           2. Dil
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownListDil3" runat="server">
+                           </asp:DropDownList>
+                           
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select5">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select6">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select7">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td style="text-align:center;">
+                           3. Dil
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownListDil4" runat="server">
+                           </asp:DropDownList>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select8">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select9">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select10">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                   </tr>
+                     <tr>
+                       <td style="text-align:center;">
+                           4. Dil
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownListDil5" runat="server">
+                           </asp:DropDownList>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select11">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select12">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select13">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                   </tr>
+                     <tr>
+                       <td style="text-align:center;">
+                           5. Dil
+                       </td>
+                       <td style="text-align:center;">
+                           <asp:DropDownList class="form-control input-small" ID="DropDownListDil6" runat="server">
+                           </asp:DropDownList>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select14">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select15">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                       <td style="text-align:center;">
+                            <select class="form-control input-small" id="Select16">
+						  <option>seçiniz</option>
+						  <option>Başlangıç</option>
+						  <option>Orta</option>
+						  <option>İyi</option>
+						  <option>Çok İyi</option>
+						</select>
+                       </td>
+                   </tr>
+                   </tbody>
+               </table>
+                 </div>
           
             </div>
             
           </div>
           </div>
-		  
-		   <div class="tab-pane" id="lN"><!-- -->
-            <p>What up girl, this is Section C.</p>
+
           </div>
+           <div class="tab-pane" id="lN"><!--İş Tecrübesi -->
+           
+    
+            
+         
+          </div> <!-- son --> 
 		  
         </div>
       </div>

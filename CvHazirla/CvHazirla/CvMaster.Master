@@ -6,7 +6,7 @@
 <head runat="server">
 
     <meta charset="utf-8">
-	<title>cv oluştur</title>
+	<title>Cv Maker</title>
 
 
 	<!-- The styles -->
@@ -121,10 +121,12 @@
         <div class="nav-collapse">
          
           <ul class="nav pull-right">
+          <li class="divider-vertical"></li>
+		   <li><a href="UyeSayfa.aspx" class="btn btn-xs btn-primary" style="margin-top: 0px;">Hosgeldiniz</a></li>
            <li class="divider-vertical"></li>
-		   <li><a href="#" class="btn btn-xs btn-primary" style="margin-top: 0px;">Giris</a></li>
+		   <li><a href="Login.aspx" class="btn btn-xs btn-primary" style="margin-top: 0px;">Giris</a></li>
 			<li class="divider-vertical"></li>  <!--/ayraç -->
-			<li><a href="#" class="btn btn-xs btn-primary" style="  margin-top: 0px;">Kayit</a></li>
+			<li><a href="KayitFormu.aspx" class="btn btn-xs btn-primary" style="  margin-top: 0px;">Kayit</a></li>
 
             <li class="divider-vertical"></li>
            

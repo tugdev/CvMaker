@@ -14,7 +14,7 @@ namespace CvHazirla.sql
 
         public static SqlCommand Ortak(String sql, string crud)
         {
-            //if (bag.State == ConnectionState.Closed)
+            //if (bag.State == ConC:\Users\Tugdev\Documents\Visual Studio 2010\Projects\CvHazirla\CvHazirla\sql\crud.csnectionState.Closed)
             bag.Open();
 
             SqlCommand sqCom = new SqlCommand(sql, bag);

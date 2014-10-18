@@ -20,11 +20,7 @@
 					
 					
 	
- <div id="myCarousel" class="carousel slide small" style="
-    width: 480px;
-    margin-left: 40px;
-    height: 270px;
-">
+ <div id="myCarousel" class="carousel slide small" style="width: 480px;margin-left: 40px;height: 270px;">
             <div class="carousel-inner">
               <div class="item active">
                 <img src="img/cv1.jpg" alt="">
@@ -67,15 +63,8 @@
   
 </ul>     
 
-
-
-
-		 
-                </div>
-             <div class="well sidebar-nav small" style="
-    padding-top: 19px;
-    margin-top: 20px;
-">
+ </div>
+             <div class="well sidebar-nav small" style="padding-top: 19px; margin-top: 20px;">
                     <ul class="nav nav-list small">
                         <li class="nav-header"><h4><span class="glyphicon glyphicon-tags "></span>Cv Maker Hakkında : &nbsp;</h4></li>
                         <p class="text-success">Cv hazırlamak neyi nasıl ne şekilde yazmak düşündürücü ve zaman alıcı bunun farkındayız.</p>
@@ -84,7 +73,7 @@
                         <p class="text-success">Cv'nizi kolayca hazırlayabilir ve pdf olarak çıktısını alıp gerekli mercilere kolayca ulaştırabilirsiniz.</p>
                    
 				   </ul>
-                </div>
+              </div>
         
     
         </div>

@@ -16,7 +16,7 @@ namespace CvHazirla
         {
             if (IsPostBack)
             {
-                int a = 19;
+                
             }
         }
 
@@ -51,7 +51,7 @@ namespace CvHazirla
             if (dt.Rows.Count == 1)
             {
                 Session["id"] = dt.Rows[0]["id"];
-                Response.Redirect("default.aspx");
+                Response.Redirect("CvOlustur.aspx");
             }
             else
                 Response.Write("<script>alert('Giriş Başarısız');</script>");
